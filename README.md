@@ -138,14 +138,12 @@ All routes are prefixed with `/api/v1/users`.
 
 ## Deployment
 
-MeetSphere is deployed on Render with separate frontend and backend services.
+MeetSphere is deployed on [Render](https://render.com) with separate frontend and backend services.
 
-- **Frontend:** [MeetSphere Frontend](https://meetspherefrontend-vvx7.onrender.com)
-- **Backend:** [MeetSphere Backend](https://meetspherebackend-u4fc.onrender.com)
+- **Frontend:** [meetspherefrontend-vvx7.onrender.com](https://meetspherefrontend-vvx7.onrender.com)
+- **Backend:** [meetspherebackend-u4fc.onrender.com](https://meetspherebackend-u4fc.onrender.com)
 
-The frontend is configured to communicate with the deployed backend when `IS_PROD` is set to `true` in `frontend/src/environment.js`.ckend-u4fc.onrender.com), which `frontend/src/environment.js` points to when `IS_PROD` is `true`.
-- **Frontend:** deployed as a static site on Render, built from the `frontend/` directory.
-
+The frontend is configured to communicate with the deployed backend when `IS_PROD` is set to `true` in `frontend/src/environment.js`.
 
 ## Author
 
