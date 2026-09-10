@@ -147,14 +147,14 @@ export default function VideoMeetComponent() {
 
             connections[id].addStream(window.localStream)
 
-            connections[id].createOffer().then((description) => {
-                console.log(description)
-                connections[id].setLocalDescription(description)
-                    .then(() => {
-                        socketRef.current.emit('signal', id, JSON.stringify({ 'sdp': connections[id].localDescription }))
-                    })
-                    .catch(e => console.log(e))
-            })
+            // connections[id].createOffer().then((description) => {
+            //     console.log(description)
+            //     connections[id].setLocalDescription(description)
+            //         .then(() => {
+            //             socketRef.current.emit('signal', id, JSON.stringify({ 'sdp': connections[id].localDescription }))
+            //         })
+            //         .catch(e => console.log(e))
+            // })
         }
 
         stream.getTracks().forEach(track => track.onended = () => {
