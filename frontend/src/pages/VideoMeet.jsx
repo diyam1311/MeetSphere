@@ -15,8 +15,9 @@ import CloseIcon from '@mui/icons-material/Close'
 import SendIcon from '@mui/icons-material/Send'
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt'
 import { useNavigate } from 'react-router-dom';
+import server from "../environment";
 
-let server_url = "http://localhost:8000";
+let server_url = server;
 
 var connections = {};
 
