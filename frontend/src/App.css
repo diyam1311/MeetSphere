@@ -1,0 +1,213 @@
+/* ===================== Landing Page ===================== */
+
+.landingPageContainer {
+  width: 100vw;
+  min-height: 100vh;
+  background:
+    radial-gradient(55% 45% at 85% 10%, rgba(255, 152, 57, 0.16), transparent 60%),
+    radial-gradient(60% 50% at 5% 90%, rgba(99, 102, 241, 0.22), transparent 60%),
+    var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  display: flex;
+  flex-direction: column;
+}
+
+.landingPageContainer nav {
+  padding-inline: 2rem;
+  padding-block: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.landingPageContainer nav h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.landingPageContainer nav .navlist {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+.landingPageContainer nav .navlist p {
+  font-weight: 600;
+  color: var(--color-text-muted);
+  transition: color 0.15s ease;
+}
+
+.landingPageContainer nav .navlist p:hover {
+  color: var(--color-text);
+}
+
+.landingPageContainer nav .navlist div[role="button"] {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--color-border-strong);
+  padding: 0.55rem 1.3rem;
+  border-radius: var(--radius-pill);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.landingPageContainer nav .navlist div[role="button"]:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+.landingPageContainer nav .navlist div[role="button"] p {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.landingMainContainer {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding-inline: 4rem;
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.landingMainContainer > div:nth-child(1) {
+  max-width: 560px;
+}
+
+.landingMainContainer > div:nth-child(1) h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.landingMainContainer > div:nth-child(1) > p {
+  margin-top: 1.1rem;
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.landingMainContainer > div:nth-child(1) div[role="button"] {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+  width: fit-content;
+  padding: 0.95rem 1.9rem;
+  border-radius: var(--radius-pill);
+  margin-top: 2.1rem;
+  box-shadow: 0 12px 28px rgba(217, 117, 0, 0.35);
+  transition: transform 0.18s var(--ease-out), box-shadow 0.18s var(--ease-out);
+}
+
+.landingMainContainer > div:nth-child(1) div[role="button"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(217, 117, 0, 0.45);
+}
+
+.landingMainContainer > div:nth-child(1) div[role="button"] a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.landingMainContainer > div:nth-child(2) img {
+  height: 65vh;
+  max-height: 620px;
+  width: auto;
+  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.45));
+}
+
+/* ===================== Home / Dashboard ===================== */
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-alt);
+}
+
+.navBar h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.meetContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  min-height: calc(100vh - 76px);
+  padding: 2rem 2.5rem;
+  background:
+    radial-gradient(50% 50% at 90% 15%, rgba(99, 102, 241, 0.16), transparent 60%),
+    var(--color-bg);
+}
+
+.leftPanel {
+  display: flex;
+  align-items: center;
+  max-width: 520px;
+}
+
+.leftPanel h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.rightPanel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightPanel > img {
+  width: min(30vw, 420px);
+  height: auto;
+  border-radius: var(--radius-lg);
+  filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.4));
+}
+
+@media (max-width: 900px) {
+  .landingMainContainer {
+    flex-direction: column;
+    text-align: center;
+    padding-block: 2rem;
+  }
+  .landingMainContainer > div:nth-child(1) div[role="button"] {
+    margin-inline: auto;
+  }
+  .landingMainContainer > div:nth-child(2) img {
+    height: 40vh;
+  }
+
+  .meetContainer {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    text-align: center;
+  }
+  .rightPanel > img {
+    width: min(60vw, 320px);
+  }
+}
+
+@media (max-width: 600px) {
+  .navBar,
+  .landingPageContainer nav {
+    padding-inline: 1.1rem;
+  }
+}
