@@ -67,7 +67,7 @@ export default function VideoMeetComponent() {
         console.log("HELLO")
         getPermissions();
 
-    })
+    },[])
 
     let getDislayMedia = () => {
         if (screen) {
